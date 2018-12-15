@@ -13,7 +13,15 @@ app.use(bodyParser.urlencoded({
 app.get('/', function (req, res) {
     res.send('Express is running');
 });
+var output = {
+    status: 'success',
+    message: 'REST API is working'
+}
+app.get('/api/json',function(req,res){
+    res.status(500).json(output);
+});
 
+app.get('/api/orders/', db.getOrdersAll);
 
 
 var port = process.env.PORT || 8080;
