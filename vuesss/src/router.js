@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/order',
       name: 'order',
-      component: Orders
+      component: Order
     },
     {
       path: '/about',
