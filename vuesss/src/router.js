@@ -13,8 +13,8 @@ export default new Router({
       component: Home
     },
     {
-      path: '/order',
-      name: 'order',
+      path: '/orders',
+      name: 'orders',
       component: Order
     },
     {
