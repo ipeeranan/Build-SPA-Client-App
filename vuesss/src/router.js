@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Orders from './views/Order.vue'
+import Order from './views/Order.vue'
 
 Vue.use(Router)
 

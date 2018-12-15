@@ -6,7 +6,7 @@
         :fields="fields" 
         :per-page="pageSize" 
         :current-page="pageIndex"></b-table>
-        <b-pagination size="md" :total-rows="products.length" v-model="pageIndex" :per-page="pageSize">
+        <b-pagination size="md" :total-rows="order.length" v-model="pageIndex" :per-page="pageSize">
     </b-pagination>
     </div>
 </template>
@@ -21,19 +21,9 @@ export default {
           pageSize: 10,
           pageIndex: 1,
           fields: [ 
-              {
-                  key:'OrderID',
-                  sortable : true
-              },
-              {
-                  key:'title',
-                  sortable : true
-              },
-              {
-                  key:'employee_id',
-                  sortable : true,
-                  variant: 'danger'
-              },
+              {key:'order_id',sortable : true},
+              {key:'customer_id',sortable : true},
+              {key:'employee_id', sortable : true,variant: 'danger'},
         ],
       }
   },
@@ -43,7 +33,7 @@ export default {
       .get('https://glacial-garden-24455.herokuapp.com/api/orders/')
       .then(function(response){
           console.log(response.data)
-          instance.products = response.data.data
+          instance.order = response.data.data
       })
   }
 }
