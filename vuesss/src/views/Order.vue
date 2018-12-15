@@ -23,7 +23,7 @@ export default {
           fields: [ 
               {key:'order_id',sortable : true},
               {key:'customer_id',sortable : true},
-              {key:'employee_id', sortable : true,variant: 'danger'},
+              {key:'employee_id', sortable : true,variant: 'danger'}
         ],
       }
   },
