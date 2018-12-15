@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var db = require('./data');
 
+var cors = require('cors');
+app.use(cors())
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
