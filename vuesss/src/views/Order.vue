@@ -2,11 +2,11 @@
     <div>
         <h1>Orders List</h1>
         <b-table striped hover 
-        :items="products" 
+        :items="orders" 
         :fields="fields" 
         :per-page="pageSize" 
         :current-page="pageIndex"></b-table>
-        <b-pagination size="md" :total-rows="order.length" v-model="pageIndex" :per-page="pageSize">
+        <b-pagination size="md" :total-rows="orders.length" v-model="pageIndex" :per-page="pageSize">
     </b-pagination>
     </div>
 </template>
@@ -17,7 +17,7 @@ export default {
   data(){
       return {
           message:'Project 2',
-          products: [],
+          orders: [],
           pageSize: 10,
           pageIndex: 1,
           fields: [ 
@@ -33,7 +33,7 @@ export default {
       .get('https://glacial-garden-24455.herokuapp.com/api/orders/')
       .then(function(response){
           console.log(response.data)
-          instance.order = response.data.data
+          instance.orders = response.data.data
       })
   }
 }
