@@ -22,7 +22,7 @@ app.get('/api/json',function(req,res){
 });
 
 app.get('/api/orders/', db.getOrdersAll);
-
+app.get('/api/orders/:id',db.getOrderByID);
 
 var port = process.env.PORT || 8080;
 app.listen(port, function () {
