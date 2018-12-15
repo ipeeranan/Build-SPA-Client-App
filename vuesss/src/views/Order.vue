@@ -13,7 +13,7 @@
 <script>
 import axios from 'axios'
 export default {
-  name: 'products',
+  name: 'orders',
   data(){
       return {
           message:'Project 2',
@@ -22,7 +22,7 @@ export default {
           pageIndex: 1,
           fields: [ 
               {
-                  key:'id',
+                  key:'OrderID',
                   sortable : true
               },
               {
@@ -30,7 +30,7 @@ export default {
                   sortable : true
               },
               {
-                  key:'price',
+                  key:'employee_id',
                   sortable : true,
                   variant: 'danger'
               },
